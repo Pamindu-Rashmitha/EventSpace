@@ -7,8 +7,6 @@ const dayMs = 24 * 60 * 60 * 1000;
 const ISO_YMD = /^\d{4}-\d{2}-\d{2}$/;
 
 // Bookings are day-based — any part of a calendar day blocks the whole day.
-// We expand to inclusive UTC day bounds so two bookings on the same date always
-// conflict, regardless of the time-of-day the client happened to send.
 const toInclusiveDayRange = (startInput, endInput) => {
   if (typeof startInput === 'string' && typeof endInput === 'string' && ISO_YMD.test(startInput) && ISO_YMD.test(endInput)) {
     const [ys, ms, ds] = startInput.split('-').map(Number);
@@ -190,10 +188,8 @@ exports.processPayment = async (req, res) => {
       return res.status(400).json({ message: 'Cannot pay for a cancelled booking' });
     }
 
-    // Fake a gateway round-trip so the UI spinner feels real.
     await new Promise((resolve) => setTimeout(resolve, 1500 + Math.random() * 1500));
 
-    // Test hook: any card ending in 0000 always declines.
     if (paymentMethod === 'card' && cardNumber && cardNumber.replace(/\s/g, '').endsWith('0000')) {
       return res.status(402).json({
         message: 'Payment declined. Your card was rejected by the issuer.',

@@ -7,7 +7,7 @@ const ONLY_DIGITS = /^\d+$/;
 
 const inPriceRange = (n) => typeof n === 'number' && !Number.isNaN(n) && n >= 0 && n <= MAX_PRICE_LKR;
 
-/** @returns {string|null} */
+
 function validateVenueContent({ name, location, amenities, photoCount }) {
   const n = String(name || '').trim();
   if (!n) return 'Venue name is required.';
@@ -56,7 +56,6 @@ const parseTypes = (raw, legacyType) => {
   return [...new Set(list)];
 };
 
-// Legacy docs may only have the old `type` field; the API always exposes `types`.
 const normalizeVenue = (doc) => {
   if (!doc) return doc;
   const o = doc.toObject ? doc.toObject() : { ...doc };

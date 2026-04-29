@@ -42,7 +42,6 @@ export function formatVenueAddress(location) {
   return parts.join(', ');
 }
 
-/** Google Maps search URL; opens in browser or Maps app when supported. */
 export function venueMapsSearchUrl(location) {
   const q = formatVenueAddress(location);
   if (!q) return null;

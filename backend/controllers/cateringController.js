@@ -178,7 +178,6 @@ exports.updateCatering = async (req, res) => {
     }
 
     if (req.files && req.files.length > 0) {
-      // New uploads replace the old ones, so clean up Cloudinary first.
       if (pkg.images && pkg.images.length > 0 && cloudinary?.uploader) {
         await Promise.all(
           pkg.images
