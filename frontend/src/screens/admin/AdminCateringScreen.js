@@ -6,7 +6,6 @@ import {
   FlatList,
   TouchableOpacity,
   Modal,
-  TextInput,
   Alert,
   RefreshControl,
   Image,
@@ -20,6 +19,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 
 import theme from '../../theme';
+import TextInput from '../../components/ThemedTextInput';
 import {
   fetchCatering,
   createCatering,

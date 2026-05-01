@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  TextInput,
   TouchableOpacity,
   ScrollView,
   ActivityIndicator,
@@ -15,6 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import theme from '../../theme';
 import { useAuth } from '../../context/AuthContext';
 import ScreenContainer from '../../components/ScreenContainer';
+import TextInput from '../../components/ThemedTextInput';
 
 const ONLY_DIGITS = /^\d+$/;
 const PHONE_10_DIGITS = /^\d{10}$/;
@@ -152,7 +152,7 @@ export default function EditProfileScreen() {
             value={form.password}
             onChangeText={(v) => update('password', v)}
             placeholder="Leave blank to keep current"
-            placeholderTextColor={theme.colors.muted}
+            placeholderTextColor={theme.colors.placeholder}
           />
           <FieldError message={errors.password} />
 

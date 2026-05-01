@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   Alert,
   Modal,
-  TextInput,
   ScrollView,
   KeyboardAvoidingView,
   Platform,
@@ -24,6 +23,7 @@ import { fetchMyBookings, cancelBooking, processPayment } from '../../api/bookin
 import { fetchMyReviews, createReview, updateReview, deleteReview } from '../../api/reviewService';
 import PaymentModal from './PaymentModal';
 import ScreenContainer from '../../components/ScreenContainer';
+import TextInput from '../../components/ThemedTextInput';
 
 const statusColor = {
   Pending: theme.colors.warning,
@@ -384,7 +384,7 @@ export default function MyBookingsScreen() {
                   reviewErrors.comment && styles.inputError,
                 ]}
                 placeholder="Share your experience... (min 10 characters)"
-                placeholderTextColor={theme.colors.muted}
+                placeholderTextColor={theme.colors.placeholder}
                 multiline
                 value={reviewComment}
                 onChangeText={(v) => {

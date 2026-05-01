@@ -5,7 +5,6 @@ import {
   StyleSheet,
   Modal,
   TouchableOpacity,
-  TextInput,
   Animated,
   Easing,
   ActivityIndicator,
@@ -16,6 +15,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import theme from '../../theme';
+import TextInput from '../../components/ThemedTextInput';
 
 
 const formatCardNumber = (raw) => {
@@ -307,7 +307,7 @@ export default function PaymentModal({ visible, onClose, onPaymentComplete, amou
                 <TextInput
                   style={styles.cardInput}
                   placeholder="4242 4242 4242 4242"
-                  placeholderTextColor="#B2BEC3"
+                  placeholderTextColor={theme.colors.placeholder}
                   keyboardType="numeric"
                   maxLength={19}
                   value={cardNumber}
@@ -327,7 +327,7 @@ export default function PaymentModal({ visible, onClose, onPaymentComplete, amou
                 <TextInput
                   style={styles.textInput}
                   placeholder="Priya Mendis"
-                  placeholderTextColor="#B2BEC3"
+                  placeholderTextColor={theme.colors.placeholder}
                   autoCapitalize="words"
                   value={cardHolder}
                   onChangeText={(v) => {
@@ -347,7 +347,7 @@ export default function PaymentModal({ visible, onClose, onPaymentComplete, amou
                     <TextInput
                       style={styles.textInput}
                       placeholder="MM/YY"
-                      placeholderTextColor="#B2BEC3"
+                      placeholderTextColor={theme.colors.placeholder}
                       keyboardType="numeric"
                       maxLength={5}
                       value={expiryDate}
@@ -366,7 +366,7 @@ export default function PaymentModal({ visible, onClose, onPaymentComplete, amou
                     <TextInput
                       style={styles.textInput}
                       placeholder="123"
-                      placeholderTextColor="#B2BEC3"
+                      placeholderTextColor={theme.colors.placeholder}
                       keyboardType="numeric"
                       maxLength={4}
                       secureTextEntry

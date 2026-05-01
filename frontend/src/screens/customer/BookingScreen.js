@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TextInput,
   TouchableOpacity,
   Platform,
   ActivityIndicator,
@@ -21,6 +20,7 @@ import PaymentModal from './PaymentModal';
 import { formatVenueOpenHours, formatVenueAddress, venueMapsSearchUrl } from '../../utils/venueFormat';
 import { getEventTypeChipsForVenue } from '../../constants/eventTypeOptions';
 import ScreenContainer from '../../components/ScreenContainer';
+import TextInput from '../../components/ThemedTextInput';
 import { useHeaderHeight } from '@react-navigation/elements';
 
 const oneDayMs = 24 * 60 * 60 * 1000;

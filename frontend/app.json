@@ -9,12 +9,24 @@
       "resizeMode": "contain",
       "backgroundColor": "#6C5CE7"
     },
-    "assetBundlePatterns": ["**/*"],
-    "ios": { "supportsTablet": true },
-    "android": {
-      "adaptiveIcon": { "backgroundColor": "#6C5CE7" }
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
     },
-    "web": { "favicon": "./assets/favicon.png" },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#6C5CE7"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.pamindurashmitha.eventspace"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "plugins": [
       [
         "expo-image-picker",
@@ -22,6 +34,11 @@
           "photosPermission": "EventSpace accesses your photos to upload venue and equipment images."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c2dc4a95-a86d-459d-86ed-d0b8a726d688"
+      }
+    }
   }
 }

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
-  TextInput,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
@@ -17,6 +16,7 @@ import * as ImagePicker from 'expo-image-picker';
 
 import theme from '../../theme';
 import ScreenContainer from '../../components/ScreenContainer';
+import TextInput from '../../components/ThemedTextInput';
 import { createVenue, updateVenue, removeVenuePhoto } from '../../api/venueService';
 import { timeStringToDate, dateToTimeString } from '../../utils/venueFormat';
 

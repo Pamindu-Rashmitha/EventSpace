@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
-  TextInput,
   TouchableOpacity,
   StyleSheet,
   KeyboardAvoidingView,
@@ -14,6 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 import theme from '../../theme';
 import { useAuth } from '../../context/AuthContext';
 import ScreenContainer from '../../components/ScreenContainer';
+import TextInput from '../../components/ThemedTextInput';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

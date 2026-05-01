@@ -7,6 +7,7 @@ const theme = {
     surface: '#FFFFFF',
     text: '#2D3436',
     muted: '#636E72',
+    placeholder: '#636E72',
     border: '#DFE6E9',
     danger: '#E74C3C',
     warning: '#F39C12',

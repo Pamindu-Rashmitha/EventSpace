@@ -8,7 +8,6 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
-  TextInput,
   RefreshControl,
   Platform,
   Modal,
@@ -21,6 +20,7 @@ import { useAuth } from '../../context/AuthContext';
 import { fetchVenues } from '../../api/venueService';
 import { fetchReviewStats } from '../../api/reviewService';
 import ScreenContainer from '../../components/ScreenContainer';
+import TextInput from '../../components/ThemedTextInput';
 
 const VENUE_TYPES = ['Event Hall', 'Meeting Room', 'Conference Room', 'Banquet Hall', 'Outdoor'];
 
