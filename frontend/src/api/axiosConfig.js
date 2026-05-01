@@ -8,7 +8,7 @@ const extra =
   {};
 
 export const API_URL =
-  extra.API_URL || process.env.EXPO_PUBLIC_API_URL || 'https://eventspace-wows.onrender.com';
+  extra.API_URL || process.env.EXPO_PUBLIC_API_URL || 'https://eventspace-wows.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
