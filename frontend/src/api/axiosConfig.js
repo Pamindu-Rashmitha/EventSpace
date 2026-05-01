@@ -1,18 +1,11 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Constants from 'expo-constants';
 
-const extra =
-  Constants.expoConfig?.extra ||
-  Constants.manifest?.extra ||
-  {};
-
-export const API_URL =
-  extra.API_URL || process.env.EXPO_PUBLIC_API_URL || 'https://eventspace-wows.onrender.com/api';
+export const API_URL = 'https://eventspace-wows.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
-  timeout: 20000,
+  timeout: 60000,
 });
 
 api.interceptors.request.use(async (config) => {

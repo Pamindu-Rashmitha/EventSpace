@@ -22,9 +22,6 @@
           "photosPermission": "EventSpace accesses your photos to upload venue and equipment images."
         }
       ]
-    ],
-    "extra": {
-      "API_URL": "http://192.168.1.8:5000/api"
-    }
+    ]
   }
 }
